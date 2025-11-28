@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tropika - Inicio</title>
+  <style>
+    /* --- MISMO CSS COMPLETO QUE YA TENÍAS --- */
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Pacifico&family=Rubik+Moonrocks&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+    :root {
+      --primary: #ff5733;
+      --secondary: #ffa94d;
+      --accent: #4ecdc4;
+      --bg: #fff8f0;
+      --text: #2d2d2d;
+      --gradient: linear-gradient(135deg, #ff5733, #ffa94d, #4ecdc4);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      background: linear-gradient(120deg, #fff8f0 0%, #ffefdd 100%);
+      color: var(--text);
+      scroll-behavior: smooth;
+      background-image: url('https://www.transparenttextures.com/patterns/cream-dust.png');
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('https://www.transparenttextures.com/patterns/symphony.png');
+      opacity: 0.05;
+      z-index: -1;
+    }
+
+    header {
+      background: var(--gradient);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 1.5s ease-in-out;
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .logo {
+      max-width: 220px;
+      display: block;
+      margin: 0 auto 1rem;
+      filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.4));
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    h1 {
+      font-family: 'Rubik Moonrocks', cursive;
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--accent);
+      padding: 1rem;
+      gap: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #2d2d2d;
+      transform: scale(1.15);
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 30px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+      margin-bottom: 3rem;
+      backdrop-filter: blur(3px);
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 2.8rem;
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 1rem;
+    }
+
+    .subscription {
+      background: linear-gradient(to right, #fff, #fff8f0);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      margin-top: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .subscription:hover {
+      transform: translateY(-5px);
+    }
+
+    input, button {
+      padding: 0.7rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      border: none;
+    }
+
+    input {
+      width: 65%;
+      margin-right: 0.5rem;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--secondary);
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: var(--gradient);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 1rem;
+      animation: gradientShift 10s ease infinite;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://raw.githubusercontent.com/chalas25/tropika/refs/heads/main/Untitled_Artwork.PNG" alt="Logo Tropika" class="logo">
+
+    <p><em>Siente el ritmo, vive la cultura</em></p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="precios.html">Precios</a>
+
+    <a href="revista.html">Revista Tropika</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <section class="reveal" id="bienvenida">
+    <h2>Bienvenidos a Tropika</h2>
+    <p> Donde celebramos la riqueza cultural dominicana en cada respiro a través de música, arte, eventos y comunidad.</p>
+    <div class="subscription">
+      <form onsubmit="handleSubscribe(event)">
+        <label for="email">Recibe tu Pedacito de Tierra mensual:</label><br>
+        <input type="email" required placeholder="Tu correo electrónico"/>
+        <button type="submit">Suscribirse</button>
+        <p id="msg" style="margin-top:1rem;"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="reveal" id="revista">
+    <h2>Revista Tropika</h2>
+    <p>Sumérgete en historias vibrantes, conoce a creadores del momento, y contenidos exclusivos cada mes.</p>
+    <ul>
+      <li>🎶 Especial de música dominicana</li>
+      <li>🖌️ Eventos artísticos del mes</li>
+      <li>📚 Narrativas de nuestras raíces</li>
+    </ul>
+  </section>
+
+  <section class="reveal" id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos un colectivo cultural que impulsa la expresión dominicana con proyectos auténticos y colaboraciones transformadoras.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tropika. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function handleSubscribe(event) {
+      event.preventDefault();
+      const emailInput = event.target.querySelector('input');
+      const message = document.getElementById('msg');
+      message.textContent = `¡Gracias por suscribirte, ${emailInput.value}!`;
+      emailInput.value = '';
+    }
+
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add('active');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
